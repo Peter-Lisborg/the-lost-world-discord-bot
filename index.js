@@ -20,7 +20,7 @@ async function updateVisits() {
     const formatted = visits.toLocaleString("en");
 
     const channel = await client.channels.fetch(CHANNEL_ID);
-    await channel.setName(`visits-${formatted}`);
+    await channel.setTopic(`〔🍪〕Visits: ${formatted}`);
 
     console.log("Updated:", formatted);
   } catch (err) {
